@@ -30,7 +30,12 @@ Here, we tried tackling the same question using cRegulme data. We started from t
 We started by obtaining the lists of differentially expressed TFs and microRNAs which were compiled from the previous literature and microarrays profiling respectively.  
 
 ```{r install_suggested_package}
-if (!require(BiocInstaller))   source("https://bioconductor.org/biocLite.R")
+if (!require(BiocInstaller)) {
+  source("https://bioconductor.org/biocLite.R")
+  library(BiocInstaller)
+}
+
+biocLite(ask = F)
 if (!require(org.Hs.eg.db))    biocLite("org.Hs.eg.db")
 if (!require(AnnotationDbi))   biocLite("AnnotationDbi")
 if (!require(clusterProfiler)) biocLite("clusterProfiler")
