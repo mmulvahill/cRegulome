@@ -38,6 +38,7 @@ the output to a cRegulome object to print and visualize.
 library(cRegulome)
 library(RSQLite)
 library(ggplot2)
+if (!require(R.utils)) install.packages("R.utils")
 ```
 
 ```{r prepare database file, eval=FALSE}
